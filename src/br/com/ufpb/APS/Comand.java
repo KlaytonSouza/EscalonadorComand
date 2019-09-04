@@ -1,6 +1,7 @@
 package br.com.ufpb.APS;
 
 public interface Comand {
-	public void Executar();
+	void executar();
+	void setFachada(FachadaEscalonador f);
 
 }
