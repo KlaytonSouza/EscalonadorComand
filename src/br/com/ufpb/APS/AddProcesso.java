@@ -2,8 +2,11 @@ package br.com.ufpb.APS;
 
 import java.util.ArrayList;
 
+
 public class AddProcesso implements Comand {
 	private String nomeProcesso;
+	private FachadaEscalonador fachada;
+	
 	
 	
 	
@@ -11,8 +14,17 @@ public class AddProcesso implements Comand {
 		this.nomeProcesso = nomeProcesso;
 		
 	}
-	public void Executar() {
-		this.listaProcesso.add(nomeProcesso);
+
+	@Override
+	public void executar() {
+		fachada.getListaProcesso().add(nomeProcesso);
+		
+	}
+	@Override
+	public void setFachada(FachadaEscalonador f) {
+		this.fachada = f;
+		
+		
 	}
 }
 
