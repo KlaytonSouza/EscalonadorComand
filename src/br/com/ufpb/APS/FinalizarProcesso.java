@@ -1,28 +1,18 @@
 package br.com.ufpb.APS;
 
-<<<<<<< HEAD
 public class FinalizarProcesso implements Comand {
 
-	private String nomeProcesso;
+	private String Processo;
 	private FachadaEscalonador fachada;
 
-	public FinalizarProcesso(String nomeProcesso) {
-		this.nomeProcesso = nomeProcesso;
-=======
-public class FinalizarProcesso implements Comand{
-	
-	private String processo;
-	private FachadaEscalonador fachada;
-	
-	public FinalizarProcesso(String processo) {
-		this.processo = processo;
->>>>>>> 62db27b95e8cc64e738dcea1338e3052dc1cc86b
+	public FinalizarProcesso(String Processo) {
+		this.Processo = Processo;
+
 	}
 
 	@Override
 	public void executar() {
-<<<<<<< HEAD
-		fachada.getListaProcesso().remove(nomeProcesso);
+		fachada.getListaProcesso().remove(Processo);
 
 	}
 
@@ -31,25 +21,6 @@ public class FinalizarProcesso implements Comand{
 		this.fachada = f;
 
 	}
+
 }
-=======
-		fachada.getListaProcesso().remove(processo);
 
-		
-		
-	}
-	public void setFachada(FachadaEscalonador f) {
-		this.fachada = f;
-	}
-}
-	
-
-	
-		
-	
-
-
-	
-
-
->>>>>>> 62db27b95e8cc64e738dcea1338e3052dc1cc86b
