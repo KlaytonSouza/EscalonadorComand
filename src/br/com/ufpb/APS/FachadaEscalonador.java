@@ -7,6 +7,10 @@ import java.util.Stack;
 public class FachadaEscalonador {
 
 	private Queue<String> listaProcesso;
+	public Queue<String> getListaProcesso() {
+		return listaProcesso;
+	}
+
 	private Stack pilhaComandos = new Stack();
 
 	public void Exercutar(Comand c) {
