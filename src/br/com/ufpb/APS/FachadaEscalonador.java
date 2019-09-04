@@ -7,9 +7,22 @@ import java.util.Stack;
 public class FachadaEscalonador {
 
 	private Queue<String> listaProcesso;
-	public Queue<String> getListaProcesso() {
-		return listaProcesso;
+	public ArrayList<String> getListaProcesso() {
+		return (ArrayList<String>) listaProcesso;
+	}	
+	ArrayList<String> processoBloqueado;
+	public ArrayList<String> getProcessoBloqueado(){
+		return processoBloqueado;
 	}
+	
+	
+	
+		
+	
+
+
+
+
 
 	private Stack pilhaComandos = new Stack();
 
