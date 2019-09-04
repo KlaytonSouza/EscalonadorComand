@@ -1,17 +1,17 @@
 package br.com.ufpb.APS;
 
-public class AddProcesso implements Comand {
+public class RetomarProcesso implements Comand {
 	private String nomeProcesso;
 	private FachadaEscalonador fachada;
 
-	public AddProcesso(String nomeProcesso) {
+	public RetomarProcesso(String nomeProcesso) {
 		this.nomeProcesso = nomeProcesso;
 
 	}
 
 	@Override
 	public void executar() {
-		fachada.getListaProcesso().add(nomeProcesso);
+		fachada.getProcessoRetomados().add(nomeProcesso);
 
 	}
 

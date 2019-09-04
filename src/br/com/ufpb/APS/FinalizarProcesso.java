@@ -1,37 +1,23 @@
 package br.com.ufpb.APS;
 
-public class FinalizarProcesso implements Comand{
-	
-	private String processo;
-	
-	public FinalizarProcesso(String processo) {
-		this.processo = processo;
+public class FinalizarProcesso implements Comand {
+
+	private String nomeProcesso;
+	private FachadaEscalonador fachada;
+
+	public FinalizarProcesso(String nomeProcesso) {
+		this.nomeProcesso = nomeProcesso;
 	}
 
 	@Override
 	public void executar() {
-		int nomeProcessoEncontrado = -1;
+		fachada.getListaProcesso().remove(nomeProcesso);
 
-		for(int k = 0; k<listaProcesso.size(); k++) {
-			if(listaProcesso.get(k).equals(processo)) {
-				nomeProcessoEncontrado = k;				
-			}
-		}if(nomeProcessoEncontrado >= 0) {
-			listaProcesso.remove(nomeProcessoEncontrado);
-		}
-
-		// TODO Stub de método gerado automaticamente
-		
 	}
 
-	
-	
+	@Override
+	public void setFachada(FachadaEscalonador f) {
+		this.fachada = f;
 
-	
-		
-	
-
-
-	
-
+	}
 }
